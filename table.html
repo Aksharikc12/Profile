@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table</title>
+</head>
+<body>
+    <label>Number</label>
+    <input type="text" id="num" onkeyup="showtable()">
+    <!--<input type="button" value="submit" ">-->
+     <div id="display"></div>
+    <script>
+        function showtable(){
+            let num = parseInt(document.getElementById('num').value);
+            if(num){
+            message = ""
+            for(i = 1;i <= 10; i++){
+                message += num + " * " + i +" = "+(num*i) + "<br />";
+            }
+            document.getElementById('display').innerHTML = message;
+            }else{
+            document.getElementById('display').innerHTML = "";
+           }
+        }
+    </script>
+</body>
+</html>
